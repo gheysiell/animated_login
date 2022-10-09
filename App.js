@@ -25,10 +25,12 @@ export default function App() {
                 toValue: 0,
                 speed: 4,
                 bounciness: 20,
+                useNativeDriver: true,
             }),
             Animated.timing(opacity, {
                 toValue: 1,
                 duration: 200,
+                useNativeDriver: true,
             })
         ]).start()
     }, [])
@@ -38,10 +40,12 @@ export default function App() {
             Animated.timing(logo.x, {
                 toValue: 55,
                 duration: 100,
+                useNativeDriver: false,
             }),
             Animated.timing(logo.y, {
                 toValue: 65,
                 duration: 100,
+                useNativeDriver: false,
             }),
         ]).start()
     }
@@ -51,10 +55,12 @@ export default function App() {
             Animated.timing(logo.x, {
                 toValue: 130,
                 duration: 100,
+                useNativeDriver: false,
             }),
             Animated.timing(logo.y, {
                 toValue: 155,
                 duration: 100,
+                useNativeDriver: false,
             }),
         ]).start()
     }
@@ -89,7 +95,7 @@ export default function App() {
                 />
                 <TextInput
                     style={styles.input}
-                    placeholder='e-mail'
+                    placeholder='senha'
                     autoCorrect={false}
                     onChangeText={() => {}}
                 />
